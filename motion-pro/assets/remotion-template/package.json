@@ -1,0 +1,25 @@
+{
+  "name": "motion-pro-projeto",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Projeto Remotion gerado pela skill motion-pro. A animacao inteira vem de src/spec.json.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Main out/video.mp4"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.1",
+    "@remotion/cli": "4.0.534",
+    "@remotion/motion-blur": "4.0.534",
+    "@remotion/three": "4.0.534",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.534",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/three": "0.186.0",
+    "typescript": "7.0.2"
+  }
+}

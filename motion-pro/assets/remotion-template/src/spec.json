@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "meta": {"title": "Projeto vazio", "slug": "projeto-vazio"},
+  "comp": {"width": 1920, "height": 1080, "fps": 30, "duration": 30, "background": "#0B0B0C"},
+  "fonts": [],
+  "layers": []
+}

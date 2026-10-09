@@ -1,0 +1,658 @@
+{
+  "version": 1,
+  "meta": {
+    "title": "Norte - Reels 9x16",
+    "slug": "norte-reels",
+    "type": "reels",
+    "style": "premium minimal",
+    "decisions": [
+      "Premium minimal: um app de foco pede silencio visual e espaco negativo.",
+      "Inter Tight 800 com tracking -40 nos titulos; peso 500 nos textos de apoio.",
+      "Gancho no frame 0: as letras ja estao subindo no primeiro quadro, sem fade do preto.",
+      "Assinatura: texto sobe de dentro de uma mascara com outExpo e sai para cima com inQuint.",
+      "O anel desenha 37% junto com o contador: o dado vira imagem.",
+      "Pulso de 120 BPM (15 f): trocas de tela perto dos frames 75 e 180.",
+      "Marca parada por 2 s no fim: ultimo frame limpo para thumbnail."
+    ]
+  },
+  "comp": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 300,
+    "background": "#0B0B0C",
+    "motionBlur": true
+  },
+  "fonts": [
+    {
+      "id": "display",
+      "family": "Inter Tight",
+      "weight": 800,
+      "pkg": "inter-tight"
+    },
+    {
+      "id": "apoio",
+      "family": "Inter Tight",
+      "weight": 500,
+      "pkg": "inter-tight"
+    }
+  ],
+  "markers": [
+    {
+      "t": 0,
+      "label": "gancho"
+    },
+    {
+      "t": 90,
+      "label": "dado"
+    },
+    {
+      "t": 186,
+      "label": "marca"
+    }
+  ],
+  "layers": [
+    {
+      "id": "s1-barra",
+      "type": "rect",
+      "out": 84,
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "fill": "#FF5A1F",
+      "size": [
+        {
+          "t": 8,
+          "v": [
+            0,
+            8
+          ],
+          "e": "outExpo"
+        },
+        {
+          "t": 30,
+          "v": [
+            120,
+            8
+          ],
+          "e": "hold"
+        },
+        {
+          "t": 66,
+          "v": [
+            120,
+            8
+          ],
+          "e": "inQuint"
+        },
+        {
+          "t": 78,
+          "v": [
+            0,
+            8
+          ]
+        }
+      ],
+      "transform": {
+        "position": [
+          540,
+          1000
+        ]
+      }
+    },
+    {
+      "id": "s1-l1",
+      "type": "text",
+      "text": "Menos",
+      "font": "display",
+      "size": 150,
+      "tracking": -40,
+      "align": "center",
+      "color": "#F4F4F0",
+      "out": 84,
+      "transform": {
+        "position": [
+          540,
+          760
+        ]
+      },
+      "matte": {
+        "layer": "s1-m1"
+      },
+      "animators": [
+        {
+          "phase": "in",
+          "by": "chars",
+          "start": -6,
+          "duration": 22,
+          "stagger": 2,
+          "ease": "outExpo",
+          "values": {
+            "y": 160
+          }
+        },
+        {
+          "phase": "out",
+          "by": "lines",
+          "start": 68,
+          "duration": 12,
+          "stagger": 0,
+          "ease": "inQuint",
+          "values": {
+            "y": -160
+          }
+        }
+      ]
+    },
+    {
+      "id": "s1-m1",
+      "type": "rect",
+      "out": 84,
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        960,
+        152
+      ],
+      "fill": "#FFFFFF",
+      "transform": {
+        "position": [
+          60,
+          620
+        ]
+      }
+    },
+    {
+      "id": "s1-l2",
+      "type": "text",
+      "text": "ruído.",
+      "font": "display",
+      "size": 150,
+      "tracking": -40,
+      "align": "center",
+      "color": "#F4F4F0",
+      "out": 84,
+      "transform": {
+        "position": [
+          540,
+          903
+        ]
+      },
+      "matte": {
+        "layer": "s1-m2"
+      },
+      "animators": [
+        {
+          "phase": "in",
+          "by": "chars",
+          "start": -2,
+          "duration": 22,
+          "stagger": 2,
+          "ease": "outExpo",
+          "values": {
+            "y": 160
+          }
+        },
+        {
+          "phase": "out",
+          "by": "lines",
+          "start": 71,
+          "duration": 12,
+          "stagger": 0,
+          "ease": "inQuint",
+          "values": {
+            "y": -160
+          }
+        }
+      ]
+    },
+    {
+      "id": "s1-m2",
+      "type": "rect",
+      "out": 84,
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        960,
+        150
+      ],
+      "fill": "#FFFFFF",
+      "transform": {
+        "position": [
+          60,
+          772
+        ]
+      }
+    },
+    {
+      "id": "s2-titulo",
+      "type": "text",
+      "text": "Mais foco.",
+      "font": "display",
+      "size": 96,
+      "tracking": -30,
+      "align": "center",
+      "color": "#F4F4F0",
+      "in": 78,
+      "out": 190,
+      "transform": {
+        "position": [
+          540,
+          560
+        ]
+      },
+      "matte": {
+        "layer": "s2-mt"
+      },
+      "animators": [
+        {
+          "phase": "in",
+          "by": "words",
+          "start": 80,
+          "duration": 20,
+          "stagger": 4,
+          "ease": "outExpo",
+          "values": {
+            "y": 120
+          }
+        },
+        {
+          "phase": "out",
+          "by": "lines",
+          "start": 176,
+          "duration": 12,
+          "stagger": 0,
+          "ease": "inQuint",
+          "values": {
+            "y": -120
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2-mt",
+      "type": "rect",
+      "in": 78,
+      "out": 190,
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        960,
+        104
+      ],
+      "fill": "#FFFFFF",
+      "transform": {
+        "position": [
+          60,
+          482
+        ]
+      }
+    },
+    {
+      "id": "s2-grupo",
+      "type": "null",
+      "in": 78,
+      "out": 190,
+      "transform": {
+        "position": [
+          540,
+          900
+        ],
+        "scale": [
+          {
+            "t": 84,
+            "v": 92,
+            "e": "outExpo"
+          },
+          {
+            "t": 104,
+            "v": 100,
+            "e": "hold"
+          },
+          {
+            "t": 176,
+            "v": 100,
+            "e": "inQuint"
+          },
+          {
+            "t": 190,
+            "v": 94
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2-trilho",
+      "type": "ellipse",
+      "parent": "s2-grupo",
+      "in": 78,
+      "out": 190,
+      "size": [
+        520,
+        520
+      ],
+      "stroke": {
+        "color": "#F4F4F0",
+        "width": 10,
+        "opacity": 14
+      },
+      "transform": {
+        "opacity": [
+          {
+            "t": 84,
+            "v": 0,
+            "e": "outQuint"
+          },
+          {
+            "t": 96,
+            "v": 100,
+            "e": "hold"
+          },
+          {
+            "t": 176,
+            "v": 100,
+            "e": "inQuint"
+          },
+          {
+            "t": 188,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2-anel",
+      "type": "ellipse",
+      "parent": "s2-grupo",
+      "in": 78,
+      "out": 190,
+      "size": [
+        520,
+        520
+      ],
+      "stroke": {
+        "color": "#FF5A1F",
+        "width": 10,
+        "cap": "round"
+      },
+      "trim": {
+        "start": 0,
+        "end": [
+          {
+            "t": 90,
+            "v": 0,
+            "e": "outExpo"
+          },
+          {
+            "t": 126,
+            "v": 37
+          }
+        ]
+      },
+      "transform": {
+        "opacity": [
+          {
+            "t": 176,
+            "v": 100,
+            "e": "inQuint"
+          },
+          {
+            "t": 188,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2-numero",
+      "type": "text",
+      "parent": "s2-grupo",
+      "in": 86,
+      "out": 190,
+      "font": "display",
+      "size": 200,
+      "tracking": -50,
+      "align": "center",
+      "color": "#F4F4F0",
+      "counter": {
+        "from": 0,
+        "to": 37,
+        "start": 90,
+        "duration": 36,
+        "ease": "outExpo",
+        "suffix": "%"
+      },
+      "transform": {
+        "position": [
+          0,
+          72
+        ],
+        "opacity": [
+          {
+            "t": 86,
+            "v": 0,
+            "e": "outQuint"
+          },
+          {
+            "t": 98,
+            "v": 100,
+            "e": "hold"
+          },
+          {
+            "t": 176,
+            "v": 100,
+            "e": "inQuint"
+          },
+          {
+            "t": 188,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2-legenda",
+      "type": "text",
+      "parent": "s2-grupo",
+      "in": 100,
+      "out": 190,
+      "text": "menos tempo perdido",
+      "font": "apoio",
+      "size": 40,
+      "tracking": 0,
+      "align": "center",
+      "color": "#8A8A84",
+      "transform": {
+        "position": [
+          0,
+          330
+        ],
+        "opacity": [
+          {
+            "t": 176,
+            "v": 100,
+            "e": "inQuint"
+          },
+          {
+            "t": 188,
+            "v": 0
+          }
+        ]
+      },
+      "animators": [
+        {
+          "phase": "in",
+          "by": "chars",
+          "start": 102,
+          "duration": 14,
+          "stagger": 1,
+          "ease": "outQuint",
+          "values": {
+            "opacity": 0,
+            "blur": 6,
+            "y": 16
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3-icone",
+      "type": "null",
+      "in": 186,
+      "transform": {
+        "position": [
+          540,
+          790
+        ]
+      }
+    },
+    {
+      "id": "s3-anel",
+      "type": "ellipse",
+      "parent": "s3-icone",
+      "in": 186,
+      "size": [
+        120,
+        120
+      ],
+      "stroke": {
+        "color": "#F4F4F0",
+        "width": 8,
+        "cap": "round"
+      },
+      "trim": {
+        "start": 0,
+        "end": [
+          {
+            "t": 188,
+            "v": 0,
+            "e": "outExpo"
+          },
+          {
+            "t": 214,
+            "v": 100
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3-ponto",
+      "type": "ellipse",
+      "parent": "s3-icone",
+      "in": 186,
+      "size": [
+        26,
+        26
+      ],
+      "fill": "#FF5A1F",
+      "transform": {
+        "position": [
+          0,
+          -60
+        ],
+        "scale": [
+          {
+            "t": 204,
+            "v": 0,
+            "e": "outExpo"
+          },
+          {
+            "t": 220,
+            "v": 100
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3-marca",
+      "type": "text",
+      "in": 186,
+      "text": "norte",
+      "font": "display",
+      "size": 150,
+      "tracking": -45,
+      "align": "center",
+      "color": "#F4F4F0",
+      "transform": {
+        "position": [
+          540,
+          1050
+        ]
+      },
+      "matte": {
+        "layer": "s3-mm"
+      },
+      "animators": [
+        {
+          "phase": "in",
+          "by": "chars",
+          "start": 192,
+          "duration": 22,
+          "stagger": 2,
+          "ease": "outExpo",
+          "values": {
+            "y": 170
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3-mm",
+      "type": "rect",
+      "in": 186,
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        960,
+        140
+      ],
+      "fill": "#FFFFFF",
+      "transform": {
+        "position": [
+          60,
+          928
+        ]
+      }
+    },
+    {
+      "id": "s3-cta",
+      "type": "text",
+      "in": 210,
+      "text": "Baixe grátis",
+      "font": "apoio",
+      "size": 40,
+      "align": "center",
+      "color": "#8A8A84",
+      "transform": {
+        "position": [
+          540,
+          1140
+        ]
+      },
+      "animators": [
+        {
+          "phase": "in",
+          "by": "words",
+          "start": 214,
+          "duration": 16,
+          "stagger": 3,
+          "ease": "outQuint",
+          "values": {
+            "opacity": 0,
+            "y": 20,
+            "blur": 6
+          }
+        }
+      ]
+    }
+  ]
+}
