@@ -118,3 +118,7 @@ No After Effects, abra **File > Scripts > Run Script File** e selecione o `.jsx`
 - Logo, trilha, imagens e vídeos de referência vêm do usuário como anexo. A skill não baixa arquivos da internet.
 - A skill usa somente as fontes de `references/fontes.md` ou fontes enviadas pelo usuário.
 - Camadas `custom` (Three.js, partículas) entram no After Effects como vídeo com transparência. Essas camadas não ficam editáveis.
+
+## Licença
+
+MIT. Você pode usar, copiar, modificar e distribuir esta skill. Mantenha o aviso de copyright do arquivo [LICENSE](LICENSE).
