@@ -61,7 +61,7 @@ motion-pro/
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/<seu-usuario>/motion-pro.git
+   git clone https://github.com/duzaoatos-commits/motion-pro.git
    ```
 2. Copie a pasta da skill para a pasta de skills do usuário:
    ```bash
